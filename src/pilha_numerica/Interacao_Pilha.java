@@ -9,7 +9,6 @@ public class Interacao_Pilha {
 		Scanner sc = new Scanner(System.in);
 
 		Pilha pilha = new Pilha();
-
 		int opc = 0;
 
 		while (opc != 5) {
@@ -23,11 +22,10 @@ public class Interacao_Pilha {
 			System.out.println("4 - Excluir");
 			System.out.println("5 - Sair");
 			System.out.println("");
-			System.out.print("Digite a opção desejada: ");
+			System.out.print("Digite a opção desejada: ");			
 			opc = sc.nextInt();
-
+					
 			switch (opc) {
-
 			case 1:
 				pilha.inserir();
 				break;
@@ -37,6 +35,7 @@ public class Interacao_Pilha {
 				break;
 
 			case 3:
+				pilha.pesquisar();
 				break;
 
 			case 4:
@@ -49,8 +48,7 @@ public class Interacao_Pilha {
 			default:
 				System.out.println("Opção inválida!");
 				break;
-			}
-
+			}			
 		}
 		sc.close();
 	}

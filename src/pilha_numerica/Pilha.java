@@ -6,22 +6,21 @@ public class Pilha {
 
 	Scanner sc = new Scanner(System.in);
 
-	int vPilha[] = new int[50];
+	float vPilha[] = new float[5];
 	int qtd = 0;
 
 	public Pilha() {
-		this.vPilha = vPilha;
 		this.qtd = 0;
 	}
 
 	void inserir() {
-		int valor;
+		float valor;
 		if (!pilhaCheia()) {
-			System.out.print("Digite o número que deseja inserir na pilha numérica: ");
-			valor = sc.nextInt();
-			vPilha[qtd] = valor;
-			qtd++;
-			System.out.println("Número " +valor+" inserido com sucesso!");
+				System.out.print("Digite o número que deseja inserir na pilha numérica: ");
+				valor = sc.nextFloat();					
+				vPilha[qtd] = valor;
+				qtd++;
+				System.out.println("Número " + valor + " inserido com sucesso!");						
 		}
 	}
 
@@ -29,6 +28,24 @@ public class Pilha {
 		if (!pilhaVazia()) {
 			for (int i = 0; i < qtd; i++) {
 				System.out.println((i + 1) + "º elemento: " + vPilha[i]);
+			}
+		}
+	}
+
+	void pesquisar() {
+		float valor;
+		boolean achei = false;
+		if(!pilhaVazia()) {
+			System.out.println("Digite o número que deseja pesquisar: ");
+			valor = sc.nextFloat();
+			for(int i = 0; i < qtd && achei==false; i++) {
+				if(valor == vPilha[i]) {
+					System.out.println("Número encontrado na " + (i+1) + "ª posição.");
+					achei = true;
+				}									
+			}
+			if(achei==false) {
+				System.out.println("Número não encontrado na pilha!");
 			}
 		}
 	}
@@ -49,4 +66,6 @@ public class Pilha {
 			return false;
 		}
 	}
+
+	
 }
