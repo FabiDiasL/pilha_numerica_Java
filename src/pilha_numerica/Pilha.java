@@ -16,11 +16,11 @@ public class Pilha {
 	void inserir() {
 		float valor;
 		if (!pilhaCheia()) {
-				System.out.print("Digite o número que deseja inserir na pilha numérica: ");
-				valor = sc.nextFloat();					
-				vPilha[qtd] = valor;
-				qtd++;
-				System.out.println("Número " + valor + " inserido com sucesso!");						
+			System.out.print("Digite o número que deseja inserir na pilha numérica: ");
+			valor = sc.nextFloat();
+			vPilha[qtd] = valor;
+			qtd++;
+			System.out.println("Número " + valor + " inserido com sucesso!");
 		}
 	}
 
@@ -35,16 +35,16 @@ public class Pilha {
 	void pesquisar() {
 		float valor;
 		boolean achei = false;
-		if(!pilhaVazia()) {
+		if (!pilhaVazia()) {
 			System.out.println("Digite o número que deseja pesquisar: ");
 			valor = sc.nextFloat();
-			for(int i = 0; i < qtd && achei==false; i++) {
-				if(valor == vPilha[i]) {
-					System.out.println("Número encontrado na " + (i+1) + "ª posição.");
+			for (int i = 0; i < qtd && achei == false; i++) {
+				if (valor == vPilha[i]) {
+					System.out.println("Número encontrado na " + (i + 1) + "ª posição.");
 					achei = true;
-				}									
+				}
 			}
-			if(achei==false) {
+			if (achei == false) {
 				System.out.println("Número não encontrado na pilha!");
 			}
 		}
@@ -66,6 +66,4 @@ public class Pilha {
 			return false;
 		}
 	}
-
-	
 }
