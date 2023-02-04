@@ -49,6 +49,13 @@ public class Pilha {
 			}
 		}
 	}
+	
+	public void excluir() {				
+		if(!pilhaVazia()) {			
+			System.out.println("Número "+ vPilha[qtd-1] +" excluído com sucesso. ");
+			qtd--;	
+		}		
+	}
 
 	private boolean pilhaCheia() {
 		if (qtd == vPilha.length) {
@@ -65,5 +72,5 @@ public class Pilha {
 		} else {
 			return false;
 		}
-	}
+	}	
 }

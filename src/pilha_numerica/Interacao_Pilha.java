@@ -39,6 +39,7 @@ public class Interacao_Pilha {
 					break;
 
 				case 4:
+					pilha.excluir();
 					break;
 
 				case 5:
