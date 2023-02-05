@@ -16,7 +16,7 @@ public class Pilha {
 			valor = sc.nextFloat();
 			vPilha[qtd] = valor;
 			qtd++;
-			System.out.println("Número " + valor + " inserido com sucesso!");
+			System.out.println("Número " + valor + " inserido na pilha com sucesso!");
 		}
 	}
 
@@ -36,7 +36,7 @@ public class Pilha {
 			valor = sc.nextFloat();
 			for (int i = 0; i < qtd && achei == false; i++) {
 				if (valor == vPilha[i]) {
-					System.out.println("Número encontrado na " + (i + 1) + "ª posição.");
+					System.out.println("Número encontrado na " + (i + 1) + "ª posição da pilha.");
 					achei = true;
 				}
 			}
@@ -48,7 +48,7 @@ public class Pilha {
 
 	void excluir() {
 		if (!pilhaVazia()) {
-			System.out.println("Número " + vPilha[qtd - 1] + " excluído com sucesso. ");
+			System.out.println("Número " + vPilha[qtd - 1] + " excluído da pilha com sucesso. ");
 			qtd--;
 		}
 	}
