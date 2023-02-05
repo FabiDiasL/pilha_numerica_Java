@@ -10,6 +10,7 @@ public class Interacao_Pilha {
 
 		Pilha pilha = new Pilha();
 		int opc = 0;
+
 		try {
 			while (opc != 5) {
 

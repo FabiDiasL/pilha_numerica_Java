@@ -6,12 +6,8 @@ public class Pilha {
 
 	Scanner sc = new Scanner(System.in);
 
-	float vPilha[] = new float[5];
+	float vPilha[] = new float[50];
 	int qtd = 0;
-
-	public Pilha() {
-		this.qtd = 0;
-	}
 
 	void inserir() {
 		float valor;
@@ -49,12 +45,12 @@ public class Pilha {
 			}
 		}
 	}
-	
-	public void excluir() {				
-		if(!pilhaVazia()) {			
-			System.out.println("Número "+ vPilha[qtd-1] +" excluído com sucesso. ");
-			qtd--;	
-		}		
+
+	void excluir() {
+		if (!pilhaVazia()) {
+			System.out.println("Número " + vPilha[qtd - 1] + " excluído com sucesso. ");
+			qtd--;
+		}
 	}
 
 	private boolean pilhaCheia() {
@@ -72,5 +68,5 @@ public class Pilha {
 		} else {
 			return false;
 		}
-	}	
+	}
 }
