@@ -69,5 +69,4 @@ public class Pilha {
 			return false;
 		}
 	}
-	
 }
