@@ -6,8 +6,8 @@ public class Pilha {
 
 	Scanner sc = new Scanner(System.in);
 
-	float vPilha[] = new float[50];
-	int qtd = 0;
+	private float vPilha[] = new float[5];
+	private int qtd = 0;
 
 	void inserir() {
 		float valor;
@@ -69,4 +69,5 @@ public class Pilha {
 			return false;
 		}
 	}
+	
 }
